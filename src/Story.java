@@ -17,7 +17,8 @@ public class Story {
 	private void StartStory() {
 		child Child = new child();
 		a.join(Child.getName());
-		Child.think("теперь самое время с ней заговорить.");
+		Child.What(" теперь самое время с ней заговорить");
+		Child.think();
 		buzzing Buzzing = new buzzing();
 		a.join(Buzzing.getName());
 		Buzzing.FamiliarandWeakly();
@@ -29,7 +30,8 @@ public class Story {
 		a.join(Kacona.getName());
 		bun Bun = new bun();
 		a.join(Bun.getName());
-		Bun.where("на тарелке.");
+		Bun.put("на тарелке");
+		Bun.where();
 		Window.place(Bun);
 		Child.laugh();
 		people Freken = new people("Фрекен Бок");

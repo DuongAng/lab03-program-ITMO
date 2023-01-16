@@ -5,10 +5,12 @@ import inf.*;
 public class buzzing implements ThingInterface {
 	private String name;
 	private boolean familiarAndweakly;
+	private String FW;
 
 	public buzzing() {
 		name = "жужжание";
 		familiarAndweakly = true;
+		FW=" знакомое слабое";
 	}
 
 	public buzzing(String name) {
@@ -19,9 +21,9 @@ public class buzzing implements ThingInterface {
 	public void FamiliarandWeakly() {
 		if (familiarAndweakly) {
 			familiarAndweakly = false;
-			System.out.println( name + " знакомое слабое");
+			System.out.println( name + FW);
 		} else {
-			System.out.println( name + " не знакомое слабое");
+			System.out.println( name + " не" +FW);
 		}
 	}
 
@@ -37,9 +39,9 @@ public class buzzing implements ThingInterface {
 	public String toString() {
 		String ending;
 		if (!familiarAndweakly) {
-			ending = " знакомое слабое";
+			ending = FW;
 		} else {
-			ending = " не знакомое слабое";
+			ending = " не " +FW;
 		}
 		return name + ending;
 	}

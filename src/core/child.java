@@ -5,6 +5,8 @@ import inf.*;
 public class child implements ThingInterface {
 	private String name;
 	private Action actions = new Action();
+	private String Thinks;
+	
 	
 	public child() {
 		name = "Малыш";
@@ -14,9 +16,13 @@ public class child implements ThingInterface {
 		super();
 		this.name = name;
 	}
-
-	public void think(String s) {
-		System.out.println( name + actions.thinks() + " что " + s);
+	
+	public void What(String s) {
+		this.Thinks=s;
+	}
+	
+	public void think() {
+		System.out.println( name + actions.thinks() + " что" + Thinks);
 	}
 
 	public void listen(buzzing Buzzing) {
@@ -34,7 +40,7 @@ public class child implements ThingInterface {
 
 	@Override
 	public String toString() {
-		return name + " услышал знакомое слабое жужжание";
+		return name+Thinks ;
 	}
 
 	@Override

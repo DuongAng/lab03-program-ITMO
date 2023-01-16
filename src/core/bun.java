@@ -4,7 +4,7 @@ import inf.*;
 
 public class bun implements ThingInterface {
 	private String name;
-	private Places place = Places.ON_THE_PLATE;
+	private String place ;
 	
 	public bun() {
 		name = "Плюшкa";
@@ -13,9 +13,14 @@ public class bun implements ThingInterface {
 	public bun(String name) {
 		this.name = name;
 	}
+	
+	public void put(String newPlace) {
+		this.place=newPlace;
+		
+	}
 
-	public void where(String Where) {
-		System.out.println( name + " с блюда " + place );
+	public void where() {
+		System.out.println( name + " " + place );
 	}
 
 	@Override
@@ -25,7 +30,7 @@ public class bun implements ThingInterface {
 
 	@Override
 	public String toString() {
-		return "плюшку с блюда";
+		return "плюшку "+ place;
 	}
 
 	@Override

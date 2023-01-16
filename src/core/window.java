@@ -24,23 +24,22 @@ public class window extends DirectionAbstract {
 	}
 
 	public void near(Object listen) {
-		System.out.println(listen +  name + near);
+		System.out.println(listen + "" + near);
 	}
 
 	public void place(bun Bun) {
 		System.out.println("Только маленькая пухлая ручка вд"
-				+ "руг мелькнула и схватила " + Bun + " " + name
-				+ at );
+				+ "руг мелькнула и схватила " + Bun + at );
 	}
 
 	@Override
 	public String getName() {
-		return name;
+		return this.name;
 	}
 
 	@Override
 	public String toString() {
-		return name ;
+		return this.name ;
 	}
 
 	@Override
